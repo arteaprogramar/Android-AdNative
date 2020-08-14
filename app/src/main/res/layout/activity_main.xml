@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="AdNative Small" />
+
+        <arte.programar.adnative.AdNativeView
+            android:id="@+id/adnative_small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:adt_icon="@drawable/ic_star"
+            app:adt_subtitle="No eam no eam albucius verterem. albucius verterem."
+            app:adt_template="@layout/adt_small_template_view"
+            app:adt_text_button="Tamquam lobortis"
+            app:adt_title="Eu eum facilisis voluptatum" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:text="AdNative Medium" />
+
+
+        <arte.programar.adnative.AdNativeView
+            android:id="@+id/adnative_medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:adt_template="@layout/adt_medium_template_view" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.core.widget.NestedScrollView>

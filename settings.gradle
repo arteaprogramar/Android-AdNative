@@ -1,0 +1,2 @@
+include ':app', ':adnative-templates'
+rootProject.name = "AdNative"
