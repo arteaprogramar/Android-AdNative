@@ -21,8 +21,8 @@ bintray {
         repo = 'Android'
         name = 'arte.programar.adnative'
         licenses = ["Apache-2.0"]
-        vcsUrl = 'https://github.com/arteaprogramar/Android-MaterialFilePicker.git'
-        websiteUrl = 'https://github.com/arteaprogramar/Android-MaterialFilePicker'
+        vcsUrl = 'https://github.com/arteaprogramar/Android-AdNative.git'
+        websiteUrl = 'https://github.com/arteaprogramar/Android-AdNative'
 
         version {
             name = project.version
@@ -40,7 +40,7 @@ def pomConfig = {
     }
 
     scm {
-        url 'https://github.com/arteaprogramar/Android-MaterialFilePicker'
+        url 'https://github.com/arteaprogramar/Android-AdNative'
     }
 }
 
@@ -60,9 +60,9 @@ afterEvaluate {
                 version version
                 pom.withXml {
                     def root = asNode()
-                    root.appendNode('description', 'SNew Material File Picker 2020.')
+                    root.appendNode('description', 'Android AdNative Templates')
                     root.appendNode('name', 'AdNative Custom')
-                    root.appendNode('url', 'https://github.com/arteaprogramar/Android-MaterialFilePicker')
+                    root.appendNode('url', 'https://github.com/arteaprogramar/Android-AdNative')
                     root.children().last() + pomConfig
                 }
             }
