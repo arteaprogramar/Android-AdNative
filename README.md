@@ -163,8 +163,6 @@ protected void onCreate(Bundle savedInstanceState) {
 
 ### Video
 
-[![Watch the video](ss/2.png)](ss/v1.webm)
-
 
 ### Contributing
 
