@@ -1,6 +1,6 @@
 ## Android AdNative Templates 
 
-[ ![Download](https://api.bintray.com/packages/arteaprogramar/Android/arte.programar.adnative/images/download.svg?version=1.0) ](https://bintray.com/arteaprogramar/Android/arte.programar.adnative/1.0/link)
+[ ![Download](https://api.bintray.com/packages/arteaprogramar/Android/arte.programar.adnative/images/download.svg?version=1.0.2) ](https://bintray.com/arteaprogramar/Android/arte.programar.adnative/1.0.2/link)
 
 Native ads are ad assets that are presented to users via UI components that are native to the platform.
 
