@@ -1,2 +1,2 @@
 include ':app', ':adnative-templates'
-rootProject.name = "AdNative"
+rootProject.name = "Android-AdNative"
