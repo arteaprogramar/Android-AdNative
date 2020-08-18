@@ -3,6 +3,7 @@
 
     <com.google.android.gms.ads.formats.UnifiedNativeAdView
         android:id="@+id/native_ad_view"
+        style="@style/AdtTheme"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -118,10 +119,11 @@
 
                         <Button
                             android:id="@+id/cta"
+                            style="@style/AdtButtonStyle"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="@dimen/adt_gutter_vertical"
-                            android:background="@drawable/adt_button" />
+                            android:theme="@style/AdtButtonStyle" />
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
 

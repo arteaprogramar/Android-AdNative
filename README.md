@@ -1,6 +1,6 @@
 ## Android AdNative Templates 
 
-[ ![Download](https://api.bintray.com/packages/arteaprogramar/Android/arte.programar.adnative/images/download.svg?version=1.0.3) ](https://bintray.com/arteaprogramar/Android/arte.programar.adnative/1.0.3/link)
+[ ![Download](https://api.bintray.com/packages/arteaprogramar/Android/arte.programar.adnative/images/download.svg?version=1.1.0) ](https://bintray.com/arteaprogramar/Android/arte.programar.adnative/1.1.0/link)
 
 Native ads are ad assets that are presented to users via UI components that are native to the platform.
 
@@ -11,6 +11,11 @@ Using native ads you can customize your ads resulting in a better user experienc
 
 The library shows custome advertising when your app does not have internet access.
 If your app has internet access it will show Google Admob Ad.
+
+## News
+
+The "AdNativeHelper" class has been created to load advertisements more quickly.
+
 ## Installation
 
 Include library in your project.
@@ -112,6 +117,30 @@ protected void onCreate(Bundle savedInstanceState) {
     loader.loadAd(new AdRequest.Builder().build());   
 
     ...
+}
+...
+
+```
+
+### Using "AdNativeHelper"
+
+```
+...
+// View
+private AdNativeView template;
+
+protected void onCreate(Bundle savedInstanceState) {
+    ...
+    AdNativeView template = findViewById(R.id.adnative);
+    AdNativeHelper.show(template, ID_NATIVE);
+    ...
+}
+
+
+@Override
+protected void onDestroy() {
+    super.onDestroy();
+    AdNativeHelper.destroy(template);
 }
 ...
 

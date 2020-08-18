@@ -29,6 +29,11 @@ import com.google.android.gms.ads.formats.UnifiedNativeAdView;
 public class AdNativeView extends FrameLayout {
 
     // Constant
+    private static final int SMALL_VIEW = R.layout.adt_small_template_view;
+    private static final int MEDIUM_VIEW = R.layout.adt_medium_template_view;
+
+    private static final String MEDIUM_TEMPLATE = "medium_template";
+    private static final String SMALL_TEMPLATE = "small_template";
     private static final int DEFAULT_ATTR = 0;
 
     // AdNative Custom
@@ -99,6 +104,18 @@ public class AdNativeView extends FrameLayout {
     }
 
     /**
+     * Only Store
+     *
+     * @param nativeAd
+     * @return
+     */
+    public static boolean adHasOnlyStore(UnifiedNativeAd nativeAd) {
+        String store = nativeAd.getStore();
+        String advertiser = nativeAd.getAdvertiser();
+        return !TextUtils.isEmpty(store) && TextUtils.isEmpty(advertiser);
+    }
+
+    /**
      * AdIcon
      *
      * @param adIcon
@@ -136,10 +153,10 @@ public class AdNativeView extends FrameLayout {
     }
 
     private void setTemplateType(int templateType) {
-        if (templateType == AdNativeUtil.SMALL_VIEW || templateType == AdNativeUtil.MEDIUM_VIEW) {
+        if (templateType == SMALL_VIEW || templateType == MEDIUM_VIEW) {
             this.templateType = templateType;
         } else {
-            this.templateType = AdNativeUtil.SMALL_VIEW;
+            this.templateType = SMALL_VIEW;
         }
     }
 
@@ -205,7 +222,7 @@ public class AdNativeView extends FrameLayout {
         );
 
         try {
-            setTemplateType(attr.getResourceId(R.styleable.AdNativeView_adt_template, AdNativeUtil.SMALL_VIEW));
+            setTemplateType(attr.getResourceId(R.styleable.AdNativeView_adt_template, SMALL_VIEW));
 
             // AdCustom
             setAdIcon(attr.getDrawable(R.styleable.AdNativeView_adt_icon));
@@ -228,10 +245,10 @@ public class AdNativeView extends FrameLayout {
      * @return
      */
     public String getTemplateTypeName() {
-        if (templateType == AdNativeUtil.SMALL_VIEW) {
-            return AdNativeUtil.MEDIUM_TEMPLATE;
-        } else if (templateType == AdNativeUtil.MEDIUM_VIEW) {
-            return AdNativeUtil.SMALL_TEMPLATE;
+        if (templateType == SMALL_VIEW) {
+            return MEDIUM_TEMPLATE;
+        } else if (templateType == MEDIUM_VIEW) {
+            return SMALL_TEMPLATE;
         } else {
             return "";
         }
@@ -263,8 +280,9 @@ public class AdNativeView extends FrameLayout {
         primaryView.setText(adTitle);
         secondaryView.setText(adSubtitle);
         callToActionView.setText(adTextButton);
+        //callToActionView.setBackgroundResource(R.drawable.adt_button);
 
-        if (templateType == AdNativeUtil.MEDIUM_VIEW) {
+        if (templateType == MEDIUM_VIEW) {
             mediaView.setBackground(adCover);
             //mediaView.setImageScaleType(ImageView.ScaleType.CENTER_CROP);
         }
@@ -291,13 +309,13 @@ public class AdNativeView extends FrameLayout {
         nativeAdView.setCallToActionView(callToActionView);
         nativeAdView.setHeadlineView(primaryView);
 
-        if (templateType == AdNativeUtil.MEDIUM_VIEW) {
+        if (templateType == MEDIUM_VIEW) {
             mediaView.setBackground(null);
             nativeAdView.setMediaView(mediaView);
         }
 
         secondaryView.setVisibility(VISIBLE);
-        if (AdNativeUtil.adHasOnlyStore(nativeAd)) {
+        if (adHasOnlyStore(nativeAd)) {
             nativeAdView.setStoreView(secondaryView);
             secondaryText = store;
         } else if (!TextUtils.isEmpty(advertiser)) {

@@ -101,9 +101,10 @@
 
                     <Button
                         android:id="@+id/cta"
+                        style="@style/AdtButtonStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/adt_button" />
+                        android:theme="@style/AdtButtonStyle" />
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
