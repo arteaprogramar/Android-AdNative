@@ -12,10 +12,4 @@
         <item name="android:textColorPrimary">@android:color/background_dark</item>
     </style>
 
-    <!-- Button Style -->
-    <style name="AdtButtonStyle" parent="@style/Widget.AppCompat.Button.Colored">
-        <item name="colorButtonNormal">@color/adt_ad_green</item>
-        <item name="android:textColor">@android:color/background_light</item>
-    </style>
-
 </resources>
