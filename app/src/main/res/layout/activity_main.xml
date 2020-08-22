@@ -18,7 +18,7 @@
             android:layout_marginBottom="5dp"
             android:text="AdNative Small" />
 
-        <arte.programar.adnative.AdNativeView
+        <arte.programar.advertising.AdNativeView
             android:id="@+id/adnative_small"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -36,7 +36,7 @@
             android:text="AdNative Medium" />
 
 
-        <arte.programar.adnative.AdNativeView
+        <arte.programar.advertising.AdNativeView
             android:id="@+id/adnative_medium"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

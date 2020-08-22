@@ -1,4 +1,4 @@
-package arte.programar.adnative;
+package arte.programar.advertising;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -22,6 +22,7 @@ import com.google.android.gms.ads.formats.MediaView;
 import com.google.android.gms.ads.formats.NativeAd.Image;
 import com.google.android.gms.ads.formats.UnifiedNativeAd;
 import com.google.android.gms.ads.formats.UnifiedNativeAdView;
+
 
 /**
  * Base class for a template view. *
@@ -280,11 +281,10 @@ public class AdNativeView extends FrameLayout {
         primaryView.setText(adTitle);
         secondaryView.setText(adSubtitle);
         callToActionView.setText(adTextButton);
-        //callToActionView.setBackgroundResource(R.drawable.adt_button);
 
         if (templateType == MEDIUM_VIEW) {
             mediaView.setBackground(adCover);
-            //mediaView.setImageScaleType(ImageView.ScaleType.CENTER_CROP);
+            mediaView.setImageScaleType(ImageView.ScaleType.CENTER_CROP);
         }
     }
 
@@ -370,6 +370,8 @@ public class AdNativeView extends FrameLayout {
      * https://developers.google.com/admob/android/native-unified#destroy_ad
      */
     public void destroyNativeAd() {
-        nativeAd.destroy();
+        if (nativeAd != null) {
+            nativeAd.destroy();
+        }
     }
 }

@@ -13,8 +13,8 @@ The library shows custome advertising when your app does not have internet acces
 If your app has internet access it will show Google Admob Ad.
 
 ## News
-
-The "AdNativeHelper" class has been created to load advertisements more quickly.
+- "AdNativeHelper" class has been created to load advertisements more quickly.
+- Package name has been changed.
 
 ## Installation
 
@@ -181,6 +181,8 @@ protected void onCreate(Bundle savedInstanceState) {
 
 ### Attributes
 
+### AdNativeView Attributes
+
 | Attribute           | Related method(s)        | Parameter          | Default value                     |
 |---------------------|--------------------------|--------------------|-----------------------------------|
 | app:adt_template    |                          | Layout References  | @layout/adt_small_template_view   |
@@ -189,6 +191,10 @@ protected void onCreate(Bundle savedInstanceState) {
 | app:adt_text_button | createAdSmallCustom()  createAdMediumCustom() | String | Follow us                |
 | app:adt_icon        | createAdSmallCustom()  createAdMediumCustom() | Drawable | Arte al Programar Icon |
 | app:adt_cover       | createAdMediumCustom()   | Drawable           | Arte al Programar Cover           |
+| AdNativeHelper      | show()                   | AdNativeView, AdKey | required params                  |
+| AdNativeHelper      | show()        | AdNativeView, AdKey, AdRequest | required params                  |
+| AdNativeHelper      | destroy()        |                            |                           |
+
 
 ### Video
 

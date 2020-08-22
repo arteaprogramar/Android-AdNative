@@ -5,7 +5,7 @@ plugins {
 }
 
 group = 'arte.programar'
-version = '1.1.0'
+version = '1.2.0'
 
 // Use ./gradlew bintrayUpload to upload
 Properties properties = new Properties()
@@ -75,7 +75,7 @@ android {
     defaultConfig {
         minSdkVersion 16
         targetSdkVersion 30
-        versionCode 5
+        versionCode 6
         versionName version
     }
 

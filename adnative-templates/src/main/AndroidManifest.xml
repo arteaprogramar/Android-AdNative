@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="arte.programar.adnative">
+    package="arte.programar.advertising">
 
     <!-- Permission -->
     <uses-permission android:name="android.permission.INTERNET" />

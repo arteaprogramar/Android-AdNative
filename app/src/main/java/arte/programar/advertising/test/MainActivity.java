@@ -1,4 +1,4 @@
-package arte.programar.adnative.test;
+package arte.programar.advertising.test;
 
 import android.os.Bundle;
 
@@ -7,8 +7,8 @@ import androidx.core.content.ContextCompat;
 
 import com.google.android.gms.ads.MobileAds;
 
-import arte.programar.adnative.AdNativeHelper;
-import arte.programar.adnative.AdNativeView;
+import arte.programar.advertising.AdNativeView;
+import arte.programar.advertising.helpers.AdNativeHelper;
 
 public class MainActivity extends AppCompatActivity {
 
